@@ -29,15 +29,8 @@ require 'cnx/cnx_info.php';
 include 'fonctions/fonction.php';
 
 // Ne générer le token QUE s'il n'existe pas déjà
-if (empty($_SESSION['csrf_token'])) {
+if (!isset($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    $_SESSION['csrf_token_time'] = time(); // Optionnel : timestamp du token
-}
-
-// Token valable 1 heure (optionnel)
-if (!empty($_SESSION['csrf_token_time']) && (time() - $_SESSION['csrf_token_time'] > 3600)) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-    $_SESSION['csrf_token_time'] = time();
 }
 
 // Détermine la page actuelle en vérifiant l'URL

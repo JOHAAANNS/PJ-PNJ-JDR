@@ -73,7 +73,7 @@ function validateForm() {
 
 
     // Fonction pour trouver l'input correspondant à une compétence
-    function trouverInputParCompetence(competence) {
+  /*  function trouverInputParCompetence(competence) {
         // Mapping des correspondances entre les noms affichés et les IDs des inputs
         var correspondances = {
             'Marchander': 'marchander',
@@ -95,7 +95,7 @@ function validateForm() {
         return $('label.form-label').filter(function() {
             return $(this).text().trim() === competence;
         }).next('input.form-control');
-    }
+    }*/
 
 
 function submitFormViaAjax() {
@@ -246,13 +246,17 @@ function submitFormViaAjax() {
     });
 
     function sauvegarderEtColorierCompetences() {
-        // Réinitialiser avant de colorier
-        reinitialiserCouleursCompetences();
+    // Réinitialiser avant de colorier
+    reinitialiserCouleursCompetences();
 
-        var texteCompetences = $('.badge.text-bg-success').next('.card-text').text();
-        if (!texteCompetences) return;
+    var texteCompetences = $('.badge.text-bg-success').next('.card-text').text();
+    if (!texteCompetences) return;
 
-        var mappingCompetences = {
+    // RÉCUPÉRATION ET TRAITEMENT DU BRONZE
+    traiterBronze();
+
+    // ... le reste de votre code pour les compétences
+    var mappingCompetences = {
             'Amorcer Piège': 'amorcer_piege',
             'Art': 'art',
             'Artisanat': 'artisanat',
@@ -287,33 +291,62 @@ function submitFormViaAjax() {
             'Scribe': 'scribe',
             'Se cacher': 'se_cacher',
             'Sentir/Goûter': 'sentir_gouter'
-        };
+          };
 
-        var texteNormalise = texteCompetences
-            .toLowerCase()
-            .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      var texteNormalise = texteCompetences
+          .toLowerCase()
+          .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-        var competencesTrouvees = [];
+      var competencesTrouvees = [];
 
-        Object.keys(mappingCompetences).forEach(function(competence) {
-            var competenceNormalisee = competence
-                .toLowerCase()
-                .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      Object.keys(mappingCompetences).forEach(function(competence) {
+          var competenceNormalisee = competence
+              .toLowerCase()
+              .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-            var regex = new RegExp('\\b' + escapeRegExp(competenceNormalisee) + '\\b', 'i');
+          var regex = new RegExp('\\b' + escapeRegExp(competenceNormalisee) + '\\b', 'i');
 
-            if (regex.test(texteNormalise)) {
-                var id = mappingCompetences[competence];
-                competencesTrouvees.push(id);
-                $('#' + id).addClass('competence-active');
-            }
-        });
+          if (regex.test(texteNormalise)) {
+              var id = mappingCompetences[competence];
+              competencesTrouvees.push(id);
+              $('#' + id).addClass('competence-active');
+          }
+      });
 
-        // Sauvegarder les compétences trouvées dans le localStorage
-        localStorage.setItem('metierCompetences', JSON.stringify(competencesTrouvees));
-        console.log('Compétences sauvegardées:', competencesTrouvees);
-    }
+      localStorage.setItem('metierCompetences', JSON.stringify(competencesTrouvees));
+      console.log('Compétences sauvegardées:', competencesTrouvees);
+  }
 
+
+
+  // Fonction pour gérer le bronze
+function traiterBronze() {
+  // Chercher le badge "Argent supplémentaire" et le paragraphe suivant
+  var badgeArgent = $('.badge.text-bg-warning:contains("Argent supplémentaire")');
+
+  if (badgeArgent.length) {
+      var paragrapheArgent = badgeArgent.next('.card-text');
+      var texteArgent = paragrapheArgent.text();
+
+      // Chercher le chiffre avant "Bronze(s)"
+      var bronzeMatch = texteArgent.match(/(\d+)\s*Bronze\(s\)/);
+
+      if (bronzeMatch) {
+          var bronze = parseInt(bronzeMatch[1]);
+          var addition = Math.floor(Math.random() * 6) + 1; // 1-6
+          var total = bronze + addition;
+
+          // Mettre à jour le champ argent
+          $('#argent').val(total).addClass('competence-active');
+
+          console.log('Bronze trouvé:', bronze, '+ dé bonus:', addition, '= Total:', total);
+      } else {
+          console.log('Aucun bronze trouvé dans le texte:', texteArgent);
+      }
+  } else {
+      console.log('Badge "Argent supplémentaire" non trouvé');
+  }
+}
     function appliquerCouleursDepuisJSON() {
         // Réinitialiser d'abord
         reinitialiserCouleursCompetences();
@@ -416,7 +449,7 @@ function genererNomAleatoire() {
 
 $('#nom_personnage').val(genererNomAleatoire());
 $('#generer_nom').click(function() {
-  $('#nom_personnage').val(genererNomAleatoire());
+$('#nom_personnage').val(genererNomAleatoire());
 });
 
 /*********** Système de points (250 points) **********/
@@ -463,9 +496,9 @@ $("input[type='number']").on('input', function() {
   if (currentValue < baseValue) {
       currentInput.val(baseValue);
       currentValue = baseValue;
-  } else if (currentValue > 100) {
-      currentInput.val(100);
-      currentValue = 100;
+  } else if (currentValue > 75) {
+      currentInput.val(75);
+      currentValue = 75; /*75% Max*/
   }
 
   // Calculer le total des points utilisés

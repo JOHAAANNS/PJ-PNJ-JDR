@@ -99,7 +99,8 @@ switch ($name_of) {
                 </div>
                 <div class="alert alert-warning text-justify m-2" role="alert">
                     <h4><i class="bi bi-info-square-fill"></i> Informations</h4>
-                    <i class="bi bi-1-circle-fill"></i> Les 250 points sont à répartir dans les <b>compétences</b> en lien avec ta profession. (Champs vert)<br>
+                    <i class="bi bi-1-circle-fill"></i> Les 250 points sont à répartir dans les <b>compétences</b> en lien avec ta profession. Maximum : 75%<br>
+                    Pour les <b>autres compétences représentant votre spécialité.</b> si vous ne trouvez pas, placez vos points dans les compétences de votre profession<br>
                     Tu ne peux pas attribuer de point dans <b>Million de Sphères</b> et <b>Royaumes Inconnus</b><br>
                     <i class="bi bi-2-circle-fill"></i> Les <b>sorts optionnels</b> sont uniquement pour les personnages ayant un minimum de <b>16</b> en <b>POU</b>voir.<br>
                     <i class="bi bi-3-circle-fill"></i> Chaque sort ajoute <b>1 point</b> de <b>Chaos</b> (Voir onglet "Magie"). Tu n\'es pas obligé de prendre les <b>sorts optionels.</b>

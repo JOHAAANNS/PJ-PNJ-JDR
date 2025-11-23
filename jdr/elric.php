@@ -305,65 +305,68 @@ else {
                         ?>
                     </select>
                   </div>
+                    <div class="col-6">
+                      <label class="form-label">Argent</label>
+                      <input type="text" class="form-control competence-input" name="argent" id="argent" value="" readonly>
+                    </div>
             </div>
             <hr>
 
                 <div class="row"><!-- Début ligne 3 -->
                     <div class="col">
 
-                        <label class="form-label">Amorcer Piège <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Grâce à la compétence Amorcer/Désamorcer un Piège, un
-aventurier peut créer et désamorcer un système mécanique libérant la chute d’un poids sur une personne, un mécanisme à ressort, un bloc coulissant, une chausse-trappe, etc."></i></label>
+                        <label class="form-label">Amorcer Piège <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Grâce à la compétence Amorcer/Désamorcer un Piège, un aventurier peut créer et désamorcer un système mécanique libérant la chute d'un poids sur une personne, un mécanisme à ressort, un bloc coulissant, une chausse-trappe, etc."></i></label>
                         <input type="number" class="form-control competence-input" name="amorcer_piege" id="amorcer_piege" value="5" required>
 
-                        <label class="form-label">Art</label>
+                        <label class="form-label">Art <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="La compétence Art permet de créer des œuvres esthétiques dans diverses disciplines : peinture, sculpture, dessin, musique, poésie, etc."></i></label>
                         <input type="number" class="form-control competence-input" name="art" id="art" value="5" required>
 
-                        <label class="form-label">Artisanat</label>
+                        <label class="form-label">Artisanat <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="L'Artisanat représente la maîtrise d'un métier manuel spécifique comme la menuiserie, la forge, la poterie, la couture, ou tout autre travail de fabrication."></i></label>
                         <input type="number" class="form-control competence-input" name="artisanat" id="artisanat"  value="5" required>
 
-                        <label class="form-label">Baratin</label>
+                        <label class="form-label">Baratin <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Le Baratin est l'art d'utiliser la parole pour tromper, embobiner ou convaincre rapidement quelqu'un par des flatteries ou des mensonges."></i></label>
                         <input type="number" class="form-control competence-input" name="baratin" id="baratin"  value="15" required>
 
-                        <label class="form-label">Chercher</label>
+                        <label class="form-label">Chercher <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Chercher permet de fouiller méthodiquement une zone pour y découvrir des éléments cachés, comme des objets dissimulés, des passages secrets ou des indices."></i></label>
                         <input type="number" class="form-control competence-input" name="chercher" id="chercher"  value="20" required>
 
-                        <label class="form-label">Crocheter</label>
+                        <label class="form-label">Crocheter <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Crocheter est la compétence qui permet d'ouvrir des serrures sans leur clé originale à l'aide d'outils spécifiques comme un passe-partout ou un crochet."></i></label>
                         <input type="number" class="form-control competence-input" name="crocheter" id="crocheter"  value="5" required>
 
-                        <label class="form-label">Déguisement</label>
+                        <label class="form-label">Déguisement <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Le Déguisement permet de modifier son apparence à l'aide de costumes, de maquillage et d'accessoires pour se faire passer pour une autre personne."></i></label>
                         <input type="number" class="form-control competence-input" name="deguisement" id="deguisement"  value="15" required>
 
-                        <label class="form-label">Déplacement silencieux</label>
+                        <label class="form-label">Déplacement silencieux <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Le Déplacement silencieux est l'art de se déplacer sans produire de bruit, essentiel pour se faufiler sans être détecté."></i></label>
                         <input type="number" class="form-control competence-input" name="depl_silencieux"  id="depl_silencieux" value="20" required>
 
-                        <label class="form-label">Dissimuler objet</label>
+                        <label class="form-label">Dissimuler objet <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Dissimuler objet permet de cacher un objet sur soi ou dans son environnement immédiat de manière à ce qu'il passe inaperçu lors d'une fouille."></i></label>
                         <input type="number" class="form-control competence-input" name="dissimuler_objet" id="dissimuler_objet"  value="20" required>
 
-                        <label class="form-label">Ecouter</label>
+                        <label class="form-label">Ecouter <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Écouter représente la capacité à tendre l'oreille et à percevoir des sons faibles ou lointains, comme des chuchotements ou des pas discrets."></i></label>
                         <input type="number" class="form-control competence-input" name="ecouter"  id="ecouter" value="25" required>
 
-                        <label class="form-label">Eloquence</label>
+                        <label class="form-label">Eloquence <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="L'Éloquence est l'art de bien parler, de persuader, de négocier ou de débattre de manière convaincante et structurée."></i></label>
                         <input type="number" class="form-control competence-input" name="eloquence" id="eloquence" value="5" required>
 
-                        <label class="form-label">Equitation</label>
+                        <label class="form-label">Equitation <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="L'Équitation est la compétence de monter et de contrôler un cheval ou une autre monture, ainsi que d'en prendre soin."></i></label>
                         <input type="number" class="form-control competence-input" name="equitation" id="equitation"  value="35" required>
 
-                        <label class="form-label">Esquive (DEX x2)</label>
+                        <label class="form-label">Esquive (DEX x2) <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="L'Esquive permet d'éviter une attaque, un projectile ou tout autre danger en effectuant un mouvement rapide et précis."></i></label>
                         <input type="number" class="form-control competence-input" name="esquive" id="esquive"  value="" required>
 
-                        <label class="form-label">Evaluer</label>
+                        <label class="form-label">Evaluer <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Évaluer permet d'estimer la valeur marchande d'un objet, son origine, son âge, ou son authenticité."></i></label>
                         <input type="number" class="form-control competence-input" name="evaluer" id="evaluer"  value="15" required>
 
-                        <label class="form-label">Grimper</label>
+                        <label class="form-label">Grimper <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Grimper représente la capacité à escalader des parois rocheuses, des arbres, des murs ou toute autre surface verticale ou inclinée."></i></label>
                         <input type="number" class="form-control competence-input" name="grimper" id="grimper"  value="40" required>
 
-                        <label class="form-label">Jeunes Royaumes</label>
+                        <label class="form-label">Jeunes Royaumes <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Jeunes Royaumes est une compétence de connaissances qui couvre l'histoire, la géographie, la politique et les coutumes des nations récentes et civilisées."></i></label>
                         <input type="number" class="form-control competence-input" name="jeunes_royaumes"  id="jeunes_royaumes" value="15" required>
 
-                        <label class="form-label">Lancer</label>
+                        <label class="form-label">Lancer <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Lancer permet de projeter un objet avec précision, que ce soit une pierre, une arme de jet ou tout autre projectile."></i></label>
                         <input type="number" class="form-control competence-input" name="lancer" id="lancer"  value="25" required>
 
-                        <label class="form-label">Langue étrangère</label>
+                        <label class="form-label">Langue étrangère <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Langue étrangère représente la maîtrise orale et écrite d'une langue autre que sa langue maternelle."></i></label>
                         <input type="number" class="form-control competence-input" name="langue_etrangere"  id="langue_etrangere" value="0" required>
 
 
@@ -371,55 +374,55 @@ aventurier peut créer et désamorcer un système mécanique libérant la chute 
 
                     <div class="col">
 
-                        <label class="form-label">Langue maternelle (INT x5)</label>
+                        <label class="form-label">Langue maternelle (INT x5) <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Langue maternelle est la parfaite maîtrise de sa langue native, incluant la lecture, l'écriture et l'expression orale."></i></label>
                         <input type="number" class="form-control competence-input" name="langue_maternelle"  id="langue_maternelle" value="0" required>
 
-                        <label class="form-label">Marchander</label>
+                        <label class="form-label">Marchander <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Marchander est l'art de négocier les prix, les termes d'un accord ou d'un contrat pour obtenir un avantage commercial."></i></label>
                         <input type="number" class="form-control competence-input" name="marchander" id="marchander" value="15" required>
 
-                        <label class="form-label">Médecine</label>
+                        <label class="form-label">Médecine <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="La Médecine permet de soigner les blessures, de diagnostiquer des maladies et de préparer des remèdes."></i></label>
                         <input type="number" class="form-control competence-input" name="medecine" id="medecine"  value="30" required>
 
-                        <label class="form-label">Million de sphères</label>
+                        <label class="form-label">Million de sphères <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Les Jeunes Royaumes savent peu de choses sur les autres plans. Là-bas, l'existence d’autres mondes est un mythe pour tous hormis les érudits et les sages. Un aventurier pourra augmenter sa connaissance du Million de Sphères en conversant avec d’éminents sorciers, en interrogeant les habitants d’autres plans, et en pratiquant des voyages astraux. Le mieux consiste encore à entreprendre des études académiques à l’aide de grimoires et d’autres livres détenteurs de savoir. Nombre de questions restent sans réponse ou sont le privilège d'une poignée de gens. Un jet de Million de Sphères réussi pourra donc ne fournir aucune information. Un succès critique pourrait révéler des informations décisives. Une maladresse pourrait indiquer qu’une chose est impossible ou n'existe pas quand elle est bien réelle en vérité."></i></label>
                         <input type="number" class="form-control competence-input" name="million_spheres" id="million_spheres"  value="0" required>
 
-                        <label class="form-label">Monde naturel</label>
+                        <label class="form-label">Monde naturel <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Le Monde naturel représente la connaissance des plantes, des animaux, des écosystèmes et des phénomènes naturels."></i></label>
                         <input type="number" class="form-control competence-input" name="monde_naturel" id="monde_naturel"  value="25" required>
 
-                        <label class="form-label">Natation</label>
+                        <label class="form-label">Natation <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="La Natation est la capacité à se déplacer dans l'eau sans couler et à survivre à des dangers aquatiques."></i></label>
                         <input type="number" class="form-control competence-input" name="natation" id="natation"  value="25" required>
 
-                        <label class="form-label">Navigation</label>
+                        <label class="form-label">Navigation <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="La Navigation permet de se repérer et de guider un navire en mer, de lire des cartes marines et d'utiliser des instruments nautiques."></i></label>
                         <input type="number" class="form-control competence-input" name="navigation"  id="navigation" value="15" required>
 
-                        <label class="form-label">Orientation</label>
+                        <label class="form-label">Orientation <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="L'Orientation est la capacité à se repérer dans l'espace, à lire une carte, à utiliser une boussole et à ne pas se perdre en terrain inconnu."></i></label>
                         <input type="number" class="form-control competence-input" name="orientation" id="orientation"  value="10" required>
 
-                        <label class="form-label">Pister</label>
+                        <label class="form-label">Pister <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Pister permet de suivre et d'interpréter les traces laissées par le passage d'êtres vivants : empreintes, restes de campement, indices divers."></i></label>
                         <input type="number" class="form-control competence-input" name="pister" id="pister"  value="10" required>
 
-                        <label class="form-label">Potions</label>
+                        <label class="form-label">Potions <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Les Potions représentent la connaissance des ingrédients et des techniques pour créer des breuvages magiques ou aux effets spéciaux."></i></label>
                         <input type="number" class="form-control competence-input" name="potions" id="potions"  value="0" required>
 
-                        <label class="form-label">Réparer/Concevoir (DEX x4)</label>
+                        <label class="form-label">Réparer/Concevoir (DEX x4) <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Réparer/Concevoir permet de fabriquer, modifier ou remettre en état des objets techniques, des mécanismes ou des outils."></i></label>
                         <input type="number" class="form-control competence-input" name="reparer_concevoir" id="reparer_concevoir"  value="0" required>
 
-                        <label class="form-label">Royaumes Inconnus</label>
+                        <label class="form-label">Royaumes Inconnus <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Royaumes Inconnus est une compétence de connaissances sur les terres lointaines, les cultures étrangères et les mystères des contrées inexplorées."></i></label>
                         <input type="number" class="form-control competence-input" name="royaumes_inconnus" id="royaumes_inconnus"  value="0" required>
 
-                        <label class="form-label">Sagacité</label>
+                        <label class="form-label">Sagacité <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="La Sagacité représente la perspicacité intellectuelle, la capacité à résoudre des énigmes, à déduire des informations et à faire preuve de jugement."></i></label>
                         <input type="number" class="form-control competence-input" name="sagacite" id="sagacite"  value="15" required>
 
-                        <label class="form-label">Sauter</label>
+                        <label class="form-label">Sauter <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Sauter permet de franchir un obstacle en effectuant un bond, qu'il soit en hauteur ou en longueur, avec agilité et précision."></i></label>
                         <input type="number" class="form-control competence-input" name="sauter" id="sauter"  value="25" required>
 
-                        <label class="form-label">Scribe</label>
+                        <label class="form-label">Scribe <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Le Scribe est la maîtrise de l'écriture, de la lecture et de la copie de textes, ainsi que la connaissance des documents officiels et des archives."></i></label>
                         <input type="number" class="form-control competence-input" name="scribe" id="scribe"  value="0" required>
 
-                        <label class="form-label">Se cacher</label>
+                        <label class="form-label">Se cacher <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Se cacher est l'art de se rendre invisible aux regards en utilisant le couvert de l'environnement, comme l'ombre ou la végétation."></i></label>
                         <input type="number" class="form-control competence-input" name="se_cacher" id="se_cacher"  value="20" required>
 
-                        <label class="form-label">Sentir/Goûter</label>
+                        <label class="form-label">Sentir/Goûter <i class="bi bi-info-square-fill" data-bs-toggle="tooltip" title="Sentir/Goûter est la capacité à identifier des odeurs, des parfums ou des saveurs, et à détecter des poisons ou des ingrédients particuliers."></i></label>
                         <input type="number" class="form-control competence-input" name="sentir_gouter" id="sentir_gouter"  value="15" required>
                     </div>
                 </div><!-- Fin ligne 3 -->
@@ -434,7 +437,7 @@ aventurier peut créer et désamorcer un système mécanique libérant la chute 
 
                         <label class="form-label">Autre 2</label>
                         <input type="text" class="form-control" name="nom_autre_2" id="nom_autre_2" value="Autre 2">
-                        <input type="number" class="form-control" name="autre_2"  id="autre_2"value="0">
+                        <input type="number" class="form-control" name="autre_2"  id="autre_2" value="0">
 
                         <label class="form-label">Autre 3</label>
                         <input type="text" class="form-control" name="nom_autre_3" id="nom_autre_3" value="Autre 3">
@@ -771,7 +774,7 @@ aventurier peut créer et désamorcer un système mécanique libérant la chute 
 
             <br>
             <label for="background" class="form-label"><i class="bi bi-card-list"></i> Background de votre personnage</label>
-            <textarea class="form-control mb-3" name="pj_all_descritpion_bg" id="pj_all_descritpion_bg" rows="10"></textarea>
+            <textarea class="form-control mb-3" name="background" id="background" rows="10"></textarea>
         </div>
     </div><!-- Fin ligne 5 -->
 
@@ -798,6 +801,8 @@ aventurier peut créer et désamorcer un système mécanique libérant la chute 
     if (isset($_SESSION['user_id']))
     {
     ?>
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+        <input type="hidden" name="date_creation" value="<?php echo date('Ymd'); ?>">
         <button type="submit" class="btn btn-primary mb-3" id="boutonformelric">Valider votre héros</button>
         </form>
     <?php
@@ -843,25 +848,33 @@ try {
     <table class="table table align-middle table-striped">
         <thead>
             <tr>
+                <th scope="col">#</th>
                 <th scope="col">Avatar</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Nationalité</th>
                 <th scope="col">Profession</th>
+                <th scope="col">Créé le</th>
+                <th scope="col">Modifier</th>
+                <th scope="col"><i class="bi bi-trash"></i></th>
             </tr>
         </thead>
         <tbody>
             <?php if (!empty($personnages)): ?>
             <?php foreach ($personnages as $personnage): ?>
                 <tr>
+                <td><?php echo htmlspecialchars($personnage['id']); ?></td>
                 <td><img src="images/avatars/<?php echo htmlspecialchars($personnage['avatar']); ?>" alt="Avatar" class="img-fluid" style="width: 50px; height: 50px;"></td>
                 <td><a href="elric.php?id=<?php echo htmlspecialchars($personnage['id']); ?>"><?php echo htmlspecialchars($personnage['nom_personnage']); ?></a></td>
                 <td><?php echo AffNation($personnage['nations']); ?></td>
                 <td><?php echo AffProfession($personnage['profession']); ?></td>
+                <td><?php echo formatDateFrNum($personnage['date_creation']); ?></td>
+                <td><button type="button" class="btn btn-primary"><i class="bi bi-pencil-square" data-bs-toggle="tooltip" title="Editer <?php echo  htmlspecialchars($personnage['nom_personnage']); ?>"></i></button></td>
+                <td><button type="button" class="btn btn-danger"><i class="bi bi-trash" data-bs-toggle="tooltip" title="Supprimer <?php echo htmlspecialchars($personnage['nom_personnage']); ?>"></i></button></td>
                 </tr>
             <?php endforeach; ?>
             <?php else: ?>
                 <tr>
-                    <td colspan="4" class="text-center">Aucun personnage trouvé</td>
+                    <td colspan="4" class="text-center">Aucun personnage trouvé.</td>
                 </tr>
             <?php endif; ?>
         </tbody>

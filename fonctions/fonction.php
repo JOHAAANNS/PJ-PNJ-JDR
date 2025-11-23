@@ -182,6 +182,42 @@ function formatDateFrench($compactDate) {
     return "$nomJour $numeroJour $nomMois $annee";
 }
 
+function formatDateFrNum($compactDate) {
+    // Valider le format d'entrée (8 chiffres)
+    if (!preg_match('/^\d{8}$/', $compactDate)) {
+        return "Date invalide";
+    }
+
+    // Extraire les composants de la date
+    $year = substr($compactDate, 0, 4);
+    $month = substr($compactDate, 4, 2);
+    $day = substr($compactDate, 6, 2);
+
+    // Créer un objet DateTime
+    $date = DateTime::createFromFormat('Y-m-d', "$year-$month-$day");
+    if (!$date) {
+        return "Date invalide";
+    }
+		else {
+
+				return $day.'/'.$month.'/'.$year;
+		}
+
+
+    // Tableaux de traduction française
+		/*
+    $jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    $mois = [1 => 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+    // Formater la date
+    $nomJour = $jours[(int)$date->format('w')];
+    $numeroJour = $date->format('j'); // 'j' pour éviter les zéros initiaux
+    $nomMois = $mois[(int)$date->format('n')];
+    $annee = $date->format('Y');
+
+    return "$nomJour $numeroJour $nomMois $annee";*/
+}
+
 
 /****Select***/
 function generateDynamicSelects($table, $fields, $base, $selectName, $selectValue, $degats_absorbe, $count = 5, $colspan = 1, $colspan2 = 1, $required = '', $non_input = 'No', $defaultLabel = "Choisissez une option") {
